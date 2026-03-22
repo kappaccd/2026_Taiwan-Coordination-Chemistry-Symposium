@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>首頁 | 2026無機錯鹽研討會</title>
+    
+    <style>
+        /* 1. 全域背景設定 */
+        body {
+            background-image: url('background.jpg') !important; 
+            background-attachment: fixed !important;
+            background-size: cover !important; 
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-color: #f0f0f0 !important; 
+            font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. 強制移除遮擋背景的白色區塊 */
+        #template_external, #template_wrapper, #template_main, #template_content, .home_wdg, .home_wdg td, .widget {
+            background-color: transparent !important;
+            background-image: none !important;
+            border: none !important;
+        }
+
+        /* 3. 半透明文字框 */
+        .widget-content {
+            background-color: rgba(255, 255, 255, 0.65) !important; 
+            padding: 30px !important;
+            border-radius: 15px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+            color: #222222 !important;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px); 
+            width: auto !important;
+        }
+
+        /* --- 重點修改：僅縮小藍色標題下方的段落文字 --- */
+        .widget-content p {
+            word-break: break-all !important;   
+            white-space: normal !important;    
+            overflow-wrap: break-word !important; 
+            margin-bottom: 15px !important;
+            text-align: justify !important;
+            font-size: 12pt !important;    /* 從 14pt 縮小至 12pt */
+            line-height: 1.8 !important;   /* 增加行高讓閱讀更舒適 */
+        }
+
+        /* 4. 主選單美化 */
+        #menu {
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important;
+            padding-bottom: 10px !important;
+        }
+        .menu_cartouche {
+            background-color: #003366 !important;
+            color: #ffffff !important;
+            padding: 12px !important;
+            font-weight: bold !important;
+            text-align: center !important;
+        }
+        .menu_niveau_1, .menu_niveau_1_on {
+            margin: 5px 12px !important;
+            border-radius: 8px !important;
+            transition: all 0.3s ease !important;
+        }
+        .menu_niveau_1 a, .menu_niveau_1_on a {
+            display: block !important;
+            padding: 10px 15px !important;
+            text-decoration: none !important;
+            color: #333 !important;
+            font-size: 18px !important; 
+        }
+        .menu_niveau_1:hover { background-color: #003366 !important; }
+        .menu_niveau_1:hover a { color: #ffffff !important; padding-left: 22px !important; }
+        .menu_niveau_1_on a { color: #003366 !important; font-weight: bold !important; }
+
+        /* 5. Header 區塊優化 (Logo 與標題緊湊) */
+        #template_header {
+            width: 65% !important; 
+            margin: 10px auto !important; 
+            background-color: rgba(255, 255, 255, 0.9) !important; 
+            border-radius: 12px !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important; 
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important; 
+            padding: 0 0 15px 0 !important; 
+        }
+        #template_header img:first-child { width: 100% !important; height: auto !important; display: block !important; }
+        #template_header img:nth-child(2) { width: 85% !important; margin: 5px 0 !important; }
+
+        #template_header h1, #template_header h2 { 
+            padding: 0 40px !important; 
+            box-sizing: border-box !important; 
+            width: 100% !important; 
+            text-align: center !important; 
+        }
+        #template_header h1 { 
+            color: #003366 !important; 
+            font-size: 1.8em !important; 
+            margin: 2px 0 !important; 
+            font-weight: bold !important; 
+            line-height: 1.2 !important; 
+        }
+        #template_header h2 { 
+            color: #666 !important; 
+            font-size: 1.3em !important; 
+            margin: 0 !important;
+            font-weight: normal; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="template_external">
+    <div id="template_wrapper">
+        <div id="template_header">
+            <img src="dots.png" alt="" onerror="this.style.display='none'" />
+            <img src="Logo.jpg" alt="Logo" />
+            <h1>2026 無機錯鹽研討會</h1>
+            <h2>2026 Taiwan Coordination Chemistry Symposium</h2>
+        </div>
+        
+        <table id="template_main" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 240px; padding: 0 25px 25px 25px;">
+                        <div id="menu">
+                            <div class="menu_cartouche">主選單 Main Menu</div>
+                            <div class="sousmenu_cartouche">
+                                <div class="menu_niveau_1_on"><a href="index.html">首頁 Home</a></div>
+                                <div class="menu_niveau_1"><a href="registration.html">徵稿與報名 Registration</a></div>
+                                <div class="menu_niveau_1"><a href="program.html">大會議程 Program</a></div>
+                                <div class="menu_niveau_1"><a href="transportation.html">交通資訊 Transportation</a></div>
+                            </div>
+                        </div>
+
+                        <div class="widget" style="margin-top: 25px;">
+                            <p class="titre" style="background-color: #003366; color: white; padding: 10px; margin:0; border-radius: 8px 8px 0 0; text-align: center;">重要日期 Dates</p>
+                            <div class="widget-content" style="padding: 15px !important; border-radius: 0 0 15px 15px !important;">
+                                <p style="font-size: 11pt !important; margin-bottom: 5px !important;">摘要截止：<br/><span style="color:#d32f2f;">2026 / 06 / 19</span></p>
+                                <p style="font-size: 11pt !important; margin-bottom: 5px !important;">報名截止：<br/><span style="color:#d32f2f;">2026 / 06 / 19</span></p>
+                                <p style="font-size: 11pt !important; margin-bottom: 0 !important;">會議日期：<br/><span>2026 / 07 / 28</span></p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td valign="top" style="padding: 0 25px 25px 0;">
+                        <div class="widget">
+                            <div class="widget-content">
+                                <p style="margin: 0 0 20px 0; font-size: 1.3em; font-weight: bold; color: #003366; border-left: 6px solid #003366; padding-left: 12px;">歡迎參加 2026 無機錯鹽研討會</p>
+                                
+                                <p>親愛的各位同事、先進與同學：</p>
+                                <p>無機錯鹽小組研討會（Coordination Chemistry Symposium）多年來一直是國內無機化學領域重要的交流場合。本研討會長年由全台灣各大學輪流舉辦，每次連續承辦兩年，旨在深化校際間的學術互動。繼高雄醫學大學與輔仁大學之後，2026年（第三十六屆）無機錯鹽研討會將於7月28日（星期二）在東海大學舉辦，我們誠摯邀請各位撥冗參加。</p>
+                                <p>今年主題聚焦於自組裝超分子、金屬有機架構、磁鐵、中子繞射、奈米生醫光電複合材料、材料模擬運算及有機金屬催化等尖端領域。我們相信，本次研討會將成為無機化學相關領域學家、物理學家、材料科學家以及青年研究人員交流的絕佳平台。我們亦希望能透過這個平台，讓資深學者與青年研究人員能有面對面交換意見的機會，在專業討論中激發新的研究靈感。</p>
+                                <p>扶植學術新秀一直是本研討會的核心宗旨之一。除了專題演講外，大會也特別重視研究生口頭報告競賽與海報展示環節，鼓勵在校學生踴躍發表研究心得。我們深信，這些學術上的實質交流能為國內無機化學研究注入持續發展的動力。</p>
+                                <p>本次會議將於東海大學第一教學區人文大樓的茂榜廳舉行。我們誠摯邀請您參與盛會，並藉此機會領略東海大學這座創立於 1955 年、台灣第一所私立大學的校園風光。校內不僅擁有享譽國際的路思義教堂，更以深厚的人文底蘊與優美的綠色環境聞名。</p>
+                                <p>期待在 2026 年的盛夏，與各位在台中相聚。</p>
+                                
+                                <div style="text-align: right; color: #333; margin-top: 40px; font-size: 12pt;">
+                                    2026 第 36 屆無機錯鹽小組研討會籌備委員會<br/>
+                                    楊振宜、邱宗文 敬邀
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div id="template_foot" style="text-align:center; padding: 20px; color: #333; font-size: 0.9em;">
+            <p>© 2026 Coordination Chemistry Symposium | Tunghai University, Taiwan</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>交通資訊 | 2026無機錯鹽研討會</title>
+    
+    <style>
+        /* 1. 全域背景設定 (同步 index) */
+        body {
+            background-image: url('background.jpg') !important; 
+            background-attachment: fixed !important;
+            background-size: cover !important; 
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-color: #f0f0f0 !important; 
+            font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. 移除背景遮擋 */
+        #template_external, #template_wrapper, #template_main, .widget {
+            background-color: transparent !important;
+            background-image: none !important;
+            border: none !important;
+        }
+
+        /* 3. 白紗感文字框 */
+        .widget-content {
+            background-color: rgba(255, 255, 255, 0.65) !important; 
+            padding: 30px !important;
+            border-radius: 15px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+            color: #222222 !important;
+            font-size: 12pt !important;
+            line-height: 1.8 !important;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px); 
+        }
+
+        /* 4. 左側選單：同步 index */
+        #menu {
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important;
+            padding-bottom: 10px !important;
+        }
+        .menu_cartouche {
+            background-color: #003366 !important;
+            color: #ffffff !important;
+            padding: 12px !important;
+            font-weight: bold !important;
+            text-align: center !important;
+        }
+        .menu_niveau_1, .menu_niveau_1_on {
+            margin: 5px 12px !important;
+            border-radius: 8px !important;
+            transition: all 0.3s ease !important;
+        }
+        .menu_niveau_1 a, .menu_niveau_1_on a {
+            display: block !important;
+            padding: 10px 15px !important;
+            text-decoration: none !important;
+            color: #333 !important;
+            font-size: 18px !important; 
+        }
+        .menu_niveau_1:hover { background-color: #003366 !important; }
+        .menu_niveau_1:hover a { color: #ffffff !important; padding-left: 22px !important; }
+        .menu_niveau_1_on a { color: #003366 !important; font-weight: bold !important; }
+
+        /* 5. Header 區塊 (同步 index 緊湊設定) */
+        #template_header {
+            width: 65% !important; 
+            margin: 10px auto !important; 
+            background-color: rgba(255, 255, 255, 0.9) !important; 
+            border-radius: 12px !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important; 
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            padding: 0 0 15px 0 !important; 
+        }
+        #template_header img:first-child { width: 100% !important; height: auto !important; display: block !important; }
+        #template_header img:nth-child(2) { width: 85% !important; margin: 5px 0 !important; }
+
+        #template_header h1, #template_header h2 {
+            padding: 0 40px !important;
+            box-sizing: border-box !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+        #template_header h1 { 
+            color: #003366 !important; 
+            font-size: 1.8em !important; 
+            margin: 2px 0 !important; 
+            font-weight: bold !important; 
+            line-height: 1.2 !important; 
+        }
+        #template_header h2 { 
+            color: #666 !important; 
+            font-size: 1.3em !important; 
+            margin: 0 !important;
+        }
+
+        /* 交通資訊專屬樣式 */
+        .transport-section { margin-bottom: 30px; }
+        .transport-title { 
+            color: #003366; 
+            font-weight: bold; 
+            font-size: 1.2em; 
+            border-bottom: 2px solid #003366; 
+            display: inline-block; 
+            margin-bottom: 15px; 
+        }
+        .map-container {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div id="template_external">
+    <div id="template_wrapper">
+
+        <div id="template_header">
+            <img src="dots.png" alt="" onerror="this.style.display='none'" />
+            <img src="Logo.jpg" alt="Logo" />
+            <h1>2026 無機錯鹽研討會</h1>
+            <h2>Transportation Information</h2>
+        </div>
+        
+        <table id="template_main" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 240px; padding: 0 25px 25px 25px;">
+                        <div id="menu">
+                            <div class="menu_cartouche">主選單 Main Menu</div>
+                            <div class="sousmenu_cartouche">
+                                <div class="menu_niveau_1"><a href="index.html">首頁 Home</a></div>
+                                <div class="menu_niveau_1"><a href="registration.html">徵稿與報名 Registration</a></div>
+                                <div class="menu_niveau_1"><a href="program.html">大會議程 Program</a></div>
+                                <div class="menu_niveau_1_on"><a href="transportation.html">交通資訊 Transportation</a></div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td valign="top" style="padding: 0 25px 25px 0;">
+                        <div class="widget">
+                            <div class="widget-content">
+                                <h3 style="color: #003366; border-left: 6px solid #003366; padding-left: 12px; margin-bottom: 25px;">交通資訊</h3>
+
+                                <div class="transport-section">
+                                    <div class="transport-title">會議地點</div>
+                                    <p>東海大學 第一教學區 人文大樓 茂榜廳<br/>
+                                    (40722 台中市西屯區台灣大道四段 1727 號)</p>
+                                </div>
+
+                                <div class="transport-section">
+                                    <div class="transport-title">大眾運輸</div>
+                                    <ul style="padding-left: 20px;">
+                                        <li><strong>高鐵台中站：</strong>轉乘高鐵快捷公車 161 路至「榮總/東海大學」站下車。</li>
+                                        <li><strong>台中火車站：</strong>轉乘優化公車專用道公車（300-310號）至「榮總/東海大學」站下車。</li>
+                                        <li><strong>客運：</strong>搭乘往台中方向客運，於「中港轉運站」或「東海大學」站下車。</li>
+                                    </ul>
+                                </div>
+
+                                <div class="transport-section">
+                                    <div class="transport-title">自行開車</div>
+                                    <p>經國道一號（中山高）：下「台中交流道」（178km），往沙鹿方向行駛，約 5 分鐘即可抵達東海大學正門。</p>
+                                </div>
+
+                                <div class="map-container">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.093110906233!2d120.6033833!3d24.18073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693e0310248473%3A0xc3f6050b1802956a!2z5p2x5rW35aSn5a24!5e0!3m2!1szh-TW!2stw!4v1711000000000!5m2!1szh-TW!2stw" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div id="template_foot" style="text-align:center; padding: 20px; color: #333; font-size: 0.9em;">
+            <p>© 2026 Coordination Chemistry Symposium | Tunghai University, Taiwan</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

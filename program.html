@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>大會議程 | 2026無機錯鹽研討會</title>
+    
+    <style>
+        /* 1. 全域背景設定 (嚴格同步 index) */
+        body {
+            background-image: url('background.jpg') !important; 
+            background-attachment: fixed !important;
+            background-size: cover !important; 
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-color: #f0f0f0 !important; 
+            font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. 移除背景遮擋 */
+        #template_external, #template_wrapper, #template_main, .widget {
+            background-color: transparent !important;
+            background-image: none !important;
+            border: none !important;
+        }
+
+        /* 3. 白紗感文字框 (同步縮小內文字體) */
+        .widget-content {
+            background-color: rgba(255, 255, 255, 0.65) !important; 
+            padding: 30px !important;
+            border-radius: 15px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+            color: #222222 !important;
+            font-size: 12pt !important;
+            line-height: 1.8 !important;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px); 
+        }
+
+        /* 4. 左側選單：精準同步 index */
+        #menu {
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important;
+            padding-bottom: 10px !important;
+        }
+        .menu_cartouche {
+            background-color: #003366 !important;
+            color: #ffffff !important;
+            padding: 12px !important;
+            font-weight: bold !important;
+            text-align: center !important;
+        }
+        .menu_niveau_1, .menu_niveau_1_on {
+            margin: 5px 12px !important;
+            border-radius: 8px !important;
+            transition: all 0.3s ease !important;
+        }
+        .menu_niveau_1 a, .menu_niveau_1_on a {
+            display: block !important;
+            padding: 10px 15px !important;
+            text-decoration: none !important;
+            color: #333 !important;
+            font-size: 18px !important; 
+        }
+        .menu_niveau_1:hover { background-color: #003366 !important; }
+        .menu_niveau_1:hover a { color: #ffffff !important; padding-left: 22px !important; }
+        .menu_niveau_1_on a { color: #003366 !important; font-weight: bold !important; }
+
+        /* 5. Header 區塊 (同步 index 緊湊設定) */
+        #template_header {
+            width: 65% !important; 
+            margin: 10px auto !important; 
+            background-color: rgba(255, 255, 255, 0.9) !important; 
+            border-radius: 12px !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important; 
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            padding: 0 0 15px 0 !important; 
+        }
+        #template_header img:first-child { width: 100% !important; height: auto !important; display: block !important; }
+        #template_header img:nth-child(2) { width: 85% !important; margin: 5px 0 !important; }
+
+        #template_header h1, #template_header h2 {
+            padding: 0 40px !important;
+            box-sizing: border-box !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+        #template_header h1 { 
+            color: #003366 !important; 
+            font-size: 1.8em !important; 
+            margin: 2px 0 !important; 
+            font-weight: bold !important; 
+            line-height: 1.2 !important; 
+        }
+        #template_header h2 { 
+            color: #666 !important; 
+            font-size: 1.3em !important; 
+            margin: 0 !important;
+            font-weight: normal; 
+        }
+
+        /* --- 議程表格專屬樣式美化 --- */
+        .program-table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 11pt; background: rgba(255,255,255,0.3); }
+        .program-table th { background-color: #003366; color: white; padding: 12px; }
+        .program-table td { padding: 12px 15px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .time-col { width: 140px; font-weight: bold; color: #003366; text-align: center; white-space: nowrap; }
+        .session-header { background-color: rgba(0, 51, 102, 0.12); font-weight: bold; color: #003366; }
+        .break-row { background-color: rgba(0, 0, 0, 0.03); color: #666; font-style: italic; }
+        .speaker-name { font-weight: bold; color: #333; }
+        .talk-title { color: #555; font-size: 0.95em; padding-left: 10px; border-left: 3px solid #003366; margin-top: 4px; }
+    </style>
+</head>
+<body>
+
+<div id="template_external">
+    <div id="template_wrapper">
+
+        <div id="template_header">
+            <img src="dots.png" alt="" onerror="this.style.display='none'" />
+            <img src="Logo.jpg" alt="Logo" />
+            <h1>2026 無機錯鹽研討會</h1>
+            <h2>Program & Schedule</h2>
+        </div>
+        
+        <table id="template_main" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 240px; padding: 0 25px 25px 25px;">
+                        <div id="menu">
+                            <div class="menu_cartouche">主選單 Main Menu</div>
+                            <div class="sousmenu_cartouche">
+                                <div class="menu_niveau_1"><a href="index.html">首頁 Home</a></div>
+                                <div class="menu_niveau_1"><a href="registration.html">徵稿與報名 Registration</a></div>
+                                <div class="menu_niveau_1_on"><a href="program.html">大會議程 Program</a></div>
+                                <div class="menu_niveau_1"><a href="transportation.html">交通資訊 Transportation</a></div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td valign="top" style="padding: 0 25px 25px 0;">
+                        <div class="widget">
+                            <div class="widget-content">
+                                <h3 style="color: #003366; border-left: 6px solid #003366; padding-left: 12px; margin-bottom: 5px; font-size: 1.4em;">大會議程</h3>
+                                <p style="font-size: 0.85em; color: #888; margin-bottom: 20px;">2026年3月22日 第一次公告</p>
+
+                                <table class="program-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="border-radius: 8px 0 0 0;">時間 Time</th>
+                                            <th style="border-radius: 0 8px 0 0;">議程內容 Event</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="time-col">09:00 - 09:30</td><td>報到</td></tr>
+                                        <tr><td class="time-col">09:30 - 09:40</td><td><strong>開幕致詞 (TBD)</strong></td></tr>
+
+                                        <tr class="session-header">
+                                            <td colspan="2">場次一 &nbsp;&nbsp; 主持人：吳景雲 (暨南大學應用化學系)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">09:40 - 10:20</td>
+                                            <td>
+                                                <div class="speaker-name">詹益慈 教授 (台灣大學化學系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">10:20 - 10:45</td>
+                                            <td>
+                                                <div class="speaker-name">林嘉禾和 教授 (清華大學化學系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="break-row"><td class="time-col">10:45 - 11:05</td><td>Coffee & Tea Break</td></tr>
+
+                                        <tr class="session-header">
+                                            <td colspan="2">場次二 &nbsp;&nbsp; 主持人：蔡惠蓮 (成功大學化學系)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">11:05 - 11:30</td>
+                                            <td>
+                                                <div class="speaker-name">李其紘 教授 (東海大學物理系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">11:30 - 11:55</td>
+                                            <td>
+                                                <div class="speaker-name">林柏亨 教授 (中興大學化學系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="break-row"><td class="time-col">11:55 - 13:35</td><td>午餐暨交流討論</td></tr>
+
+                                        <tr class="session-header">
+                                            <td colspan="2">場次三 &nbsp;&nbsp; 主持人：許桂芳 (成功大學化學系)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">13:35 - 14:00</td>
+                                            <td>
+                                                <div class="speaker-name">劉學儒 教授 (陽明交通應用化學系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">14:00 - 14:25</td>
+                                            <td>
+                                                <div class="speaker-name">陳嘉祥 教授 (高雄醫學大學 醫藥暨化學系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+                                        <tr style="background-color: rgba(255, 193, 7, 0.08);">
+                                            <td class="time-col">14:25 - 15:20</td>
+                                            <td><strong>海報競賽與口頭報告</strong></td>
+                                        </tr>
+
+                                        <tr class="break-row"><td class="time-col">15:00 - 15:20</td><td>Coffee & Tea Break</td></tr>
+
+                                        <tr class="session-header">
+                                            <td colspan="2">場次四 &nbsp;&nbsp; 主持人：陳炳宇 (中興大學化學系)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">15:20 - 15:45</td>
+                                            <td>
+                                                <div class="speaker-name">江明錫 教授 (中央研究院化學研究所)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">15:45 - 16:10</td>
+                                            <td>
+                                                <div class="speaker-name">黃志嘉 教授 (成功大學化學系)</div>
+                                                <div class="talk-title">題目：(待定)</div>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="session-header">
+                                            <td colspan="2">場次五 &nbsp;&nbsp; 主持人：王志傑 (東吳大學化學系)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">16:10 - 17:00</td>
+                                            <td>
+                                                <div class="speaker-name">曾炳鐃 教授 (中正大學化學暨生物化學系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="time-col">17:00 - 17:25</td>
+                                            <td>
+                                                <div class="speaker-name">邱政超 教授 (中山大學化學系)</div>
+                                                <div class="talk-title">題目：TBC</div>
+                                            </td>
+                                        </tr>
+
+                                        <tr><td class="time-col">17:25 - 17:45</td><td><strong>頒獎與閉幕致詞</strong></td></tr>
+                                        <tr><td class="time-col">17:45 - 18:00</td><td>大合照</td></tr>
+                                        <tr style="background-color: rgba(0, 51, 102, 0.08);">
+                                            <td class="time-col">18:00 - 20:00</td>
+                                            <td><strong>晚宴 (地點:TBD)</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div id="template_foot" style="text-align:center; padding: 20px; color: #333; font-size: 0.9em;">
+            <p>© 2026 Coordination Chemistry Symposium | Tunghai University, Taiwan</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
