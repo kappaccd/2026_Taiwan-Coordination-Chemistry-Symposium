@@ -81,7 +81,8 @@
 
         /* 5. Header 區塊優化 (Logo 與標題緊湊) */
         #template_header {
-            width: 65% !important; 
+            width: 80% !important; 
+            max-width: 1200px !important;  /* 設定最大寬度防止在大螢幕過寬 */
             margin: 10px auto !important; 
             background-color: rgba(255, 255, 255, 0.9) !important; 
             border-radius: 12px !important;
@@ -121,7 +122,7 @@
 <div id="template_external">
     <div id="template_wrapper">
         <div id="template_header">
-            <img src="dots.png" alt="" onerror="this.style.display='none'" />
+            
             <img src="Logo.jpg" alt="Logo" />
             <h1>2026 無機錯鹽研討會</h1>
             <h2>2026 Taiwan Coordination Chemistry Symposium</h2>
