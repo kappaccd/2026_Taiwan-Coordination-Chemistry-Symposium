@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>大會講者 | 2026無機錯鹽研討會</title>
+    
+    <style>
+        /* 1. 全域背景設定 (同步 index) */
+        body {
+            background-image: url('background.jpg') !important; 
+            background-attachment: fixed !important;
+            background-size: cover !important; 
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-color: #f0f0f0 !important; 
+            font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. 強制移除遮擋背景的白色區塊 */
+        #template_external, #template_wrapper, #template_main, .widget {
+            background-color: transparent !important;
+            background-image: none !important;
+            border: none !important;
+        }
+
+        /* 3. 半透明文字框 */
+        .widget-content {
+            background-color: rgba(255, 255, 255, 0.65) !important; 
+            padding: 30px !important;
+            border-radius: 15px !important;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
+            color: #222222 !important;
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px); 
+        }
+
+        /* 4. 左側選單：同步 index 特效 */
+        #menu {
+            background-color: rgba(255, 255, 255, 0.6) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important;
+            padding-bottom: 10px !important;
+        }
+        .menu_cartouche {
+            background-color: #003366 !important;
+            color: #ffffff !important;
+            padding: 12px !important;
+            font-weight: bold !important;
+            text-align: center !important;
+        }
+        .menu_niveau_1, .menu_niveau_1_on {
+            margin: 5px 12px !important;
+            border-radius: 8px !important;
+            transition: all 0.3s ease !important;
+        }
+        .menu_niveau_1 a, .menu_niveau_1_on a {
+            display: block !important;
+            padding: 10px 15px !important;
+            text-decoration: none !important;
+            color: #333 !important;
+            font-size: 18px !important; 
+        }
+        .menu_niveau_1:hover { background-color: #003366 !important; }
+        .menu_niveau_1:hover a { color: #ffffff !important; padding-left: 22px !important; }
+        .menu_niveau_1_on a { color: #003366 !important; font-weight: bold !important; }
+
+        /* 5. Header 區塊設定 */
+        #template_header {
+            width: 80% !important; 
+            max-width: 1200px !important;
+            margin: 10px auto !important; 
+            background-color: rgba(255, 255, 255, 0.9) !important; 
+            border-radius: 12px !important;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+            overflow: hidden !important; 
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important; 
+            padding: 0 0 15px 0 !important; 
+        }
+        #template_header img:first-child { width: 100% !important; height: auto !important; display: block !important; }
+        #template_header img:nth-child(2) { width: 85% !important; margin: 5px 0 !important; }
+
+        #template_header h1, #template_header h2 { 
+            padding: 0 40px !important; 
+            box-sizing: border-box !important; 
+            width: 100% !important; 
+            text-align: center !important; 
+        }
+        #template_header h1 { 
+            color: #003366 !important; 
+            font-size: 1.8em !important; 
+            margin: 2px 0 !important; 
+            font-weight: bold !important; 
+            line-height: 1.2 !important; 
+        }
+        #template_header h2 { 
+            color: #666 !important; 
+            font-size: 1.3em !important; 
+            margin: 0 !important;
+            font-weight: normal; 
+        }
+
+        /* --- 講者排版專用 CSS 網格系統 --- */
+        .section-title {
+            color: #003366;
+            font-size: 1.45em;
+            font-weight: bold;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 8px;
+            margin: 30px 0 20px 0;
+        }
+
+        /* 大會演講：2欄網格 */
+        .plenary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 修正 11fr 寫法，改為對等 1fr */
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* 邀請演講：4欄網格 */
+        .invited-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* 單個講者方塊樣式 */
+        .speaker-card {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 大會講者相片大尺寸 */
+        .plenary-grid .speaker-img {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid #003366;
+            margin-bottom: 12px;
+        }
+
+        /* 邀請講者相片標準尺寸 */
+        .invited-grid .speaker-img {
+            width: 130px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 2px solid #666;
+            margin-bottom: 10px;
+        }
+
+        .speaker-name {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #111;
+            margin: 5px 0;
+        }
+        .speaker-org {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div id="template_external">
+    <div id="template_wrapper">
+        <div id="template_header">
+            <img src="Logo.jpg" alt="Logo" />
+            <h1>2026 無機錯鹽研討會</h1>
+            <h2>Invited Speakers</h2>
+        </div>
+        
+        <table id="template_main" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tbody>
+                <tr>
+                    <td valign="top" style="width: 240px; padding: 0 25px 25px 25px;">
+                        <div id="menu">
+                            <div class="menu_cartouche">主選單 Main Menu</div>
+                            <div class="sousmenu_cartouche">
+                                <div class="menu_niveau_1"><a href="index.html">首頁 Home</a></div>
+                                <div class="menu_niveau_1_on"><a href="speakers.html">大會講者 Speakers</a></div>
+                                <div class="menu_niveau_1"><a href="registration.html">徵稿與報名 Registration</a></div>
+                                <div class="menu_niveau_1"><a href="program.html">大會議程 Program</a></div>
+                                <div class="menu_niveau_1"><a href="transportation.html">交通資訊 Transportation</a></div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td valign="top" style="padding: 0 25px 25px 0;">
+                        <div class="widget">
+                            <div class="widget-content">
+                                
+                                <div class="section-title">大會演講 Plenary Speakers</div>
+                                <div class="plenary-grid">
+                                    <div class="speaker-card">
+                                        <img src="plenary_01.jpg" alt="詹益慈 教授" class="speaker-img" />
+                                        <div class="speaker-name">詹益慈 教授</div>
+                                        <div class="speaker-org">國立臺灣大學 化學系</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="plenary_02.jpg" alt="曾炳鐃 教授" class="speaker-img" />
+                                        <div class="speaker-name">曾炳鐃 教授</div>
+                                        <div class="speaker-org">國立中正大學 化學系</div>
+                                    </div>
+                                </div>
+
+                                <div class="section-title">邀請演講 Invited Speakers</div>
+                                <div class="invited-grid">
+                                    <div class="speaker-card">
+                                        <img src="invited_01.jpg" alt="林嘉和 教授" class="speaker-img" /> <!-- 修正：圖1 改為 invited_01.jpg -->
+                                        <div class="speaker-name">林嘉和 教授</div>
+                                        <div class="speaker-org">國立清華大學 化學系</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="invited_02.jpg" alt="李其紘 教授" class="speaker-img" /> <!-- 修正：圖2 改為 invited_02.jpg -->
+                                        <div class="speaker-name">李其紘 教授</div>
+                                        <div class="speaker-org">東海大學 物理系</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="invited_03.jpg" alt="林柏亨 教授" class="speaker-img" /> <!-- 修正：圖3 改為 invited_03.jpg -->
+                                        <div class="speaker-name">林柏亨 教授</div>
+                                        <div class="speaker-org">國立中興大學 化學系</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="invited_04.jpg" alt="劉學儒 教授" class="speaker-img" /> <!-- 修正：圖4 改為 invited_04.jpg -->
+                                        <div class="speaker-name">劉學儒 教授</div>
+                                        <div class="speaker-org">國立陽明交通大學 化學系</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="invited_05.jpg" alt="陳嘉祥 教授" class="speaker-img" /> <!-- 修正：圖5 改為 invited_05.jpg -->
+                                        <div class="speaker-name">陳嘉祥 教授</div>
+                                        <div class="speaker-org">高雄醫學大學 醫藥暨化學系</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="invited_06.jpg" alt="江明錫 教授" class="speaker-img" /> <!-- 修正：圖6 改為 invited_06.jpg -->
+                                        <div class="speaker-name">江明錫 教授</div>
+                                        <div class="speaker-org">中央研究院 化學研究所</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="invited_07.jpg" alt="黃志嘉 教授" class="speaker-img" /> <!-- 修正：圖7 改為 invited_07.jpg -->
+                                        <div class="speaker-name">黃志嘉 教授</div>
+                                        <div class="speaker-org">國立成功大學 光電系</div>
+                                    </div>
+                                    <div class="speaker-card">
+                                        <img src="invited_08.jpg" alt="邱政超 教授" class="speaker-img" /> <!-- 修正：圖8 改為 invited_08.jpg -->
+                                        <div class="speaker-name">邱政超 教授</div>
+                                        <div class="speaker-org">國立中山大學 化學系</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div id="template_foot" style="text-align:center; padding: 20px; color: #333; font-size: 0.9em;">
+            <p>© 2026 Coordination Chemistry Symposium | Tunghai University, Taiwan</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
