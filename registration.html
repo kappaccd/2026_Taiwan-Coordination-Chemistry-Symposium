@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>大會講者 | 2026無機錯鹽研討會</title>
+    <title>徵稿與報名 | 2026無機錯鹽研討會</title>
     
     <style>
         /* 1. 全域背景設定 (同步 index) */
@@ -25,13 +25,15 @@
             border: none !important;
         }
 
-        /* 3. 半透明文字框 */
+        /* 3. 極致半透明文字框 (白紗感) */
         .widget-content {
             background-color: rgba(255, 255, 255, 0.65) !important; 
             padding: 30px !important;
             border-radius: 15px !important;
             box-shadow: 0 10px 40px rgba(0,0,0,0.15) !important;
             color: #222222 !important;
+            font-size: 12pt !important;
+            line-height: 1.9 !important;
             -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px); 
         }
@@ -67,10 +69,10 @@
         .menu_niveau_1:hover a { color: #ffffff !important; padding-left: 22px !important; }
         .menu_niveau_1_on a { color: #003366 !important; font-weight: bold !important; }
 
-        /* 5. Header 區塊設定 */
+        /* 5. Header 區塊 - 已同步您 index 的緊湊設定 */
         #template_header {
-            width: 80% !important; 
-            max-width: 1200px !important;
+            width: 80% !important;        /* 從 65% 改為 80% */
+            max-width: 1200px !important;  /* 設定最大寬度防止在大螢幕過寬 */
             margin: 10px auto !important; 
             background-color: rgba(255, 255, 255, 0.9) !important; 
             border-radius: 12px !important;
@@ -78,18 +80,30 @@
             overflow: hidden !important; 
             display: flex !important;
             flex-direction: column !important;
-            align-items: center !important; 
+            align-items: center !important;
             padding: 0 0 15px 0 !important; 
         }
-        #template_header img:first-child { width: 100% !important; height: auto !important; display: block !important; }
-        #template_header img:nth-child(2) { width: 85% !important; margin: 5px 0 !important; }
-
-        #template_header h1, #template_header h2 { 
-            padding: 0 40px !important; 
-            box-sizing: border-box !important; 
+        
+        /* 網點裝飾圖 */
+        #template_header img:first-child {
             width: 100% !important; 
-            text-align: center !important; 
+            height: auto !important;
+            display: block !important;
         }
+
+        /* Logo 圖片 */
+        #template_header img:nth-child(2) { 
+            width: 85% !important; 
+            margin: 5px 0 !important; 
+        }
+
+        #template_header h1, #template_header h2 {
+            padding: 0 40px !important;
+            box-sizing: border-box !important;
+            width: 100% !important;
+            text-align: center !important;
+        }
+        
         #template_header h1 { 
             color: #003366 !important; 
             font-size: 1.8em !important; 
@@ -104,75 +118,23 @@
             font-weight: normal; 
         }
 
-        /* --- 講者排版專用 CSS 網格系統 --- */
-        .section-title {
-            color: #003366;
-            font-size: 1.45em;
-            font-weight: bold;
-            border-bottom: 2px solid #003366;
-            padding-bottom: 8px;
-            margin: 30px 0 20px 0;
+        /* 報名按鈕樣式 */
+        .btn-registration {
+            display: inline-block;
+            background-color: #003366;
+            color: #ffffff !important;
+            padding: 15px 40px;
+            text-decoration: none !important;
+            border-radius: 30px;
+            font-size: 1.2em;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,51,102,0.3);
         }
-
-        /* 大會演講：2欄網格 */
-        .plenary-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 11fr);
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        /* 邀請演講：4欄網格 */
-        .invited-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        /* 單個講者方塊樣式 */
-        .speaker-card {
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        .speaker-card:hover {
-            transform: translateY(-5px);
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-        /* 大會講者相片大尺寸 */
-        .plenary-grid .speaker-img {
-            width: 180px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 3px solid #003366;
-            margin-bottom: 12px;
-        }
-
-        /* 邀請講者相片標準尺寸 */
-        .invited-grid .speaker-img {
-            width: 130px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 6px;
-            border: 2px solid #666;
-            margin-bottom: 10px;
-        }
-
-        .speaker-name {
-            font-size: 1.15em;
-            font-weight: bold;
-            color: #111;
-            margin: 5px 0;
-        }
-        .speaker-org {
-            font-size: 0.95em;
-            color: #555;
-            line-height: 1.4;
+        .btn-registration:hover {
+            background-color: #00509e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,51,102,0.4);
         }
     </style>
 </head>
@@ -180,10 +142,12 @@
 
 <div id="template_external">
     <div id="template_wrapper">
+
         <div id="template_header">
+            
             <img src="Logo.jpg" alt="Logo" />
             <h1>2026 無機錯鹽研討會</h1>
-            <h2>Invited Speakers</h2>
+            <h2>Registration & Submission</h2>
         </div>
         
         <table id="template_main" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
@@ -191,8 +155,8 @@
                 <tr>
                     <td valign="top" style="width: 240px; padding: 0 25px 25px 25px;">
                         <div id="menu">
-                            <<div class="menu_cartouche">主選單 Main Menu</div>
-    <div class="sousmenu_cartouche">
+                            <div class="menu_cartouche">主選單 Main Menu</div>
+                            <div class="sousmenu_cartouche">
         <div class="menu_niveau_1"><a href="index.html">首頁 Home</a></div>
         <div class="menu_niveau_1_on"><a href="speakers.html">大會講者 Speakers</a></div>
         <div class="menu_niveau_1"><a href="registration.html">徵稿與報名 Registration</a></div>
@@ -205,66 +169,22 @@
 
                     <td valign="top" style="padding: 0 25px 25px 0;">
                         <div class="widget">
-                            <div class="widget-content">
+                            <div class="widget-content" style="text-align: center; padding: 60px 30px !important;">
+                                <h3 style="color: #003366; margin-bottom: 25px;">線上報名與投稿</h3>
                                 
-                                <div class="section-title">大會演講 Plenary Speakers</div>
-                                <div class="plenary-grid">
-                                    <div class="speaker-card">
-                                        <img src="plenary_01.jpg" alt="詹益慈 教授" class="speaker-img" />
-                                        <div class="speaker-name">詹益慈 教授</div>
-                                        <div class="speaker-org">國立臺灣大學 化學系</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="plenary_02.jpg" alt="林嘉和 教授" class="speaker-img" />
-                                        <div class="speaker-name">林嘉和 教授</div>
-                                        <div class="speaker-org">國立臺灣大學 化學系</div>
-                                    </div>
-                                </div>
+                                <p style="font-size: 1.15em; margin-bottom: 30px; color: #333;">
+                                    請利用以下連結進行線上報名，報名與投稿截止日期至 <strong>6 月 26 日</strong>
+                                </p>
 
-                                <div class="section-title">邀請演講 Invited Speakers</div>
-                                <div class="invited-grid">
-                                    <div class="speaker-card">
-                                        <img src="invited_01.jpg" alt="李其紘 教授" class="speaker-img" />
-                                        <div class="speaker-name">李其紘 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="invited_02.jpg" alt="林柏亨 教授" class="speaker-img" />
-                                        <div class="speaker-name">林柏亨 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="invited_03.jpg" alt="劉學儒 教授" class="speaker-img" />
-                                        <div class="speaker-name">劉學儒 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="invited_04.jpg" alt="陳嘉祥 教授" class="speaker-img" />
-                                        <div class="speaker-name">陳嘉祥 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="invited_05.jpg" alt="江明錫 教授" class="speaker-img" />
-                                        <div class="speaker-name">江明錫 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="invited_06.jpg" alt="黃志嘉 教授" class="speaker-img" />
-                                        <div class="speaker-name">黃志嘉 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="invited_07.jpg" alt="曾炳境 教授" class="speaker-img" />
-                                        <div class="speaker-name">曾炳境 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                    <div class="speaker-card">
-                                        <img src="invited_08.jpg" alt="邱政超 教授" class="speaker-img" />
-                                        <div class="speaker-name">邱政超 教授</div>
-                                        <div class="speaker-org">服務單位名稱</div>
-                                    </div>
-                                </div>
+                                <a href="https://forms.gle/nUfmBE1aZim1Q3LD8" target="_blank" class="btn-registration">
+                                    立即前往報名與投稿 (Google Form)
+                                </a>
 
+                                <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.1); color: #444; font-size: 0.95em; line-height: 1.8;">
+                                    如有報名相關疑問，請洽籌備小組 楊振宜 教授<br/>
+                                    電話：(04) 2359-0121 分機 32237<br/>
+                                    Email：ciyang@thu.edu.tw
+                                </div>
                             </div>
                         </div>
                     </td>
