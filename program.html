@@ -16,6 +16,8 @@
             font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif !important;
             margin: 0;
             padding: 0;
+            /* 重要修改：同步頂部橫幅所需間距 */
+            padding-top: 50px !important;
         }
 
         /* 2. 移除背景遮擋 */
@@ -115,15 +117,40 @@
         .break-row { background-color: rgba(0, 0, 0, 0.03); color: #666; font-style: italic; }
         .speaker-name { font-weight: bold; color: #333; }
         .talk-title { color: #555; font-size: 0.95em; padding-left: 10px; border-left: 3px solid #003366; margin-top: 4px; }
+
+        /* 新增：頂部固定公告橫幅樣式 */
+        .top-announcement-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            background-color: #fff3cd !important; 
+            border-bottom: 2px solid #ffeeba !important;
+            color: #856404 !important; 
+            text-align: center !important;
+            padding: 12px 20px !important;
+            font-size: 11pt !important;
+            font-weight: bold !important;
+            z-index: 9999 !important; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            box-sizing: border-box !important;
+        }
+        .top-announcement-bar a {
+            color: #003366 !important;
+            text-decoration: underline !important;
+        }
     </style>
 </head>
 <body>
+
+<div class="top-announcement-bar">
+    📢 【重要通知】2026/07/04 大會議程更新、學生壁報與口頭競賽分組及規則已公布！請與會先進至 <a href="program.html">大會議程</a>查看細節。
+</div>
 
 <div id="template_external">
     <div id="template_wrapper">
 
         <div id="template_header">
-            
             <img src="Logo.jpg" alt="Logo" />
             <h1>2026 無機錯鹽研討會</h1>
             <h2>Program & Schedule</h2>
@@ -134,38 +161,37 @@
                 <tr>
                     <td valign="top" style="width: 240px; padding: 0 25px 25px 25px;">
                         <div id="menu">
-    <div class="menu_cartouche">主選單 Main Menu</div>
-    <div class="sousmenu_cartouche">
-        <div class="menu_niveau_1"><a href="index.html">首頁 Home</a></div>
-        <div class="menu_niveau_1_on"><a href="speakers.html">大會講者 Speakers</a></div>
-        <div class="menu_niveau_1"><a href="registration.html">徵稿與報名 Registration</a></div>
-        <div class="menu_niveau_1"><a href="program.html">大會議程 Program</a></div>
-        <div class="menu_niveau_1"><a href="transportation.html">交通資訊 Transportation</a></div>
-        <div class="menu_niveau_1"><a href="sponsors.html">機構支持與贊助 Sponsors</a></div>
-    </div>
-</div>
-                        </div>
-                    </td>
+                            <div class="menu_cartouche">主選單 Main Menu</div>
+                            <div class="sousmenu_cartouche">
+                                <div class="menu_niveau_1"><a href="index.html">首頁 Home</a></div>
+                                <div class="menu_niveau_1"><a href="speakers.html">大會講者 Speakers</a></div>
+                                <div class="menu_niveau_1"><a href="registration.html">徵稿與報名 Registration</a></div>
+                                <div class="menu_niveau_1_on"><a href="program.html">大會議程 Program</a></div>
+                                <div class="menu_niveau_1"><a href="transportation.html">交通資訊 Transportation</a></div>
+                                <div class="menu_niveau_1"><a href="sponsors.html">機構支持與讚助 Sponsors</a></div>
+                            </div>
+                        </div> </td>
 
                     <td valign="top" style="padding: 0 25px 25px 0;">
                         <div class="widget">
                             <div class="widget-content">
-                                <h3 style="color: #003366; border-left: 6px solid #003366; padding-left: 12px; margin-bottom: 5px; font-size: 1.4em;">大會議程</h3>
-                                <p style="font-size: 0.85em; color: #888; margin-bottom: 20px;">2026年6月18日 議程更新</p>
+                                <h3 style="color: #003366; border-left: 6px solid #003366; padding-left: 12px; margin-bottom: 20px; font-size: 1.4em;">
+                                    大會議程 <span style="font-size: 0.6em; color: #d32f2f; font-weight: normal; margin-left: 15px; vertical-align: middle;">2026年7月4日 議程更新</span>
+                                </h3>
 
                                 <table class="program-table">
                                     <thead>
                                         <tr>
                                             <th style="border-radius: 8px 0 0 0;">時間 Time</th>
-                                            <th style="border-radius: 0 8px 0 0;">議程內容 Event</th>
+                                            <th style="border-radius: 0 8px 0 0;">115年7月28日(星期二) 東海大學第一教學區人文大樓(B1)茂榜廳 </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr><td class="time-col">09:00 - 17:00</td><td>報到</td></tr>
-                                        <tr><td class="time-col">09:30 - 09:40</td><td><strong>開幕致詞:東海大學 楊定亞副校長 主持人:東海大學化學系 莊旻傑主任</strong></td></tr>
+                                        <tr><td class="time-col">09:00 - 17:00</td><td>報到/人文大樓入口大廳</td></tr>
+                                        <tr><td class="time-col">09:30 - 09:40</td><td><strong>開幕致詞:東海大學 楊定亞副校長   主持人:東海大學化學系 莊旻傑主任 (茂榜廳)</strong></td></tr>
 
                                         <tr class="session-header">
-                                            <td colspan="2">場次一 &nbsp;&nbsp; 主持人：吳景雲 (暨南大學應用化學系)</td>
+                                            <td colspan="2">場次一 &nbsp;&nbsp; 主持人：吳景雲 (暨南大學應用化學系)                 地點: 茂榜廳</td>
                                         </tr>
                                         <tr>
                                             <td class="time-col">09:40 - 10:20</td>
@@ -181,11 +207,18 @@
                                                 <div class="talk-title">題目：Controlled Formation of Heteroleptic Microporous Zirconium Co-ordination Cages for Trace Benzene Removal from Hexane</div>
                                             </td>
                                         </tr>
-
-                                        <tr class="break-row"><td class="time-col">10:45 - 11:05</td><td>Coffee & Tea Break</td></tr>
+                                        <tr style="background-color: rgba(255, 193, 7, 0.08);">
+                                            <td class="time-col">11:00 - 11:50</td>
+                                            <td>
+                                                <strong>學生壁報論文競賽(場次1) 地點:人文大樓一樓廣場</strong>
+                                                <div style="margin-top: 5px; font-size: 0.95em;">
+                                                     <a href="2026_Inorganic_Competition_0705.pdf" target="_blank" style="color: #003366; font-weight: bold; text-decoration: underline;">學生壁報與口頭競賽分組及規則 (PDF)</a>
+                                                </div>
+                                            </td>
+                                        </tr>                           
 
                                         <tr class="session-header">
-                                            <td colspan="2">場次二 &nbsp;&nbsp; 主持人：蔡惠蓮 (成功大學化學系)</td>
+                                            <td colspan="2">場次二 &nbsp;&nbsp; 主持人：蔡惠蓮 (成功大學化學系)  地點: 茂榜廳</td>
                                         </tr>
                                         <tr>
                                             <td class="time-col">11:05 - 11:30</td>
@@ -201,12 +234,22 @@
                                                 <div class="talk-title">題目：Exploring Metal Cluster Architectures in Magnetic Lanthanide Complexes</div>
                                             </td>
                                         </tr>
-
-                                        <tr class="break-row"><td class="time-col">11:55 - 12:10</td><td>大合照</td></tr>
-                                        <tr class="break-row"><td class="time-col">12:10 - 13:30</td><td>午餐暨交流討論</td></tr>
-
+                                        <tr class="break-row">
+                                            <td class="time-col">11:55 - 12:10</td>
+                                            <td>
+                                                <strong>大合照</strong> 
+                                                <span style="color: #333; font-weight: bold; font-style: normal !important; margin-left: 10px;">地點:文理大道教堂前</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="break-row">
+                                            <td class="time-col">12:10 - 13:30</td>
+                                            <td>
+                                                <strong>午餐暨交流討論</strong> 
+                                                <span style="color: #333; font-weight: bold; font-style: normal !important; margin-left: 10px;">地點:人文大樓教室</span>
+                                            </td>
+                                        </tr>
                                         <tr class="session-header">
-                                            <td colspan="2">場次三 &nbsp;&nbsp; 主持人：許桂芳 (成功大學化學系)</td>
+                                            <td colspan="2">場次三 &nbsp;&nbsp; 主持人：許桂芳 (成功大學化學系)  地點: 茂榜廳</td>
                                         </tr>
                                         <tr>
                                             <td class="time-col">13:30 - 13:55</td>
@@ -223,19 +266,22 @@
                                             </td>
                                         </tr>
                                         <tr style="background-color: rgba(255, 193, 7, 0.08);">
-                                            <td class="time-col">14:25 - 15:20</td>
-                                            <td><strong>海報競賽與口頭報告</strong></td>
+                                            <td class="time-col">14:30 - 15:20</td>
+                                            <td>
+                                                <div style="font-weight: bold; margin-bottom: 5px;">學生壁報論文競賽 (場次2) 地點: 人文大樓一樓廣場</div>
+                                                <div style="font-weight: bold; margin-bottom: 8px;">學生論文口頭分組競賽 地點: 人文大樓教室</div>
+                                                <div style="font-size: 0.95em;">
+                                                    <a href="2026_Inorganic_Competition_0705.pdf" target="_blank" style="color: #003366; font-weight: bold; text-decoration: underline;">學生壁報與口頭競賽分組及規則 (PDF)</a>
+                                                </div>
+                                            </td>
                                         </tr>
-
-                                        <tr class="break-row"><td class="time-col">15:00 - 15:20</td><td>Coffee & Tea Break</td></tr>
-
                                         <tr class="session-header">
-                                            <td colspan="2">場次四 &nbsp;&nbsp; 主持人：陳炳宇 (中興大學化學系)</td>
+                                            <td colspan="2">場次四 &nbsp;&nbsp; 主持人：陳炳宇 (中興大學化學系)  地點: 茂榜廳</td>
                                         </tr>
                                         <tr>
                                             <td class="time-col">15:20 - 15:45</td>
                                             <td>
-                                                <div class="speaker-name">江明錫 教授 (中央研究院化學研究所)</div>
+                                                <div class="speaker-name">江明錫 教授 (中央研究所化學研究所)</div>
                                                 <div class="talk-title">題目：Self-healing electrode materials for long-lifetime industrial-current water electrolysis</div>
                                             </td>
                                         </tr>
@@ -248,7 +294,7 @@
                                         </tr>
 
                                         <tr class="session-header">
-                                            <td colspan="2">場次五 &nbsp;&nbsp; 主持人：王志傑 (東吳大學化學系)</td>
+                                            <td colspan="2">場次五 &nbsp;&nbsp; 主持人：王志傑 (東吳大學化學系) 地點: 茂榜廳</td>
                                         </tr>
                                         <tr>
                                             <td class="time-col">16:10 - 17:00</td>
@@ -265,10 +311,10 @@
                                             </td>
                                         </tr>
 
-                                        <tr><td class="time-col">17:25 - 17:45</td><td><strong>頒獎與閉幕致詞</strong></td></tr>
-                                                                            <tr style="background-color: rgba(0, 51, 102, 0.08);">
+                                        <tr><td class="time-col">17:25 - 17:50</td><td><strong>頒獎與閉幕致詞</strong></td></tr>
+                                        <tr style="background-color: rgba(0, 51, 102, 0.08);">
                                             <td class="time-col">18:00 - 20:00</td>
-                                            <td><strong>晚宴 (地點:TBD)</strong></td>
+                                            <td><strong>晚宴 (地點:福科路星時代婚宴會館)</strong></td>
                                         </tr>
                                     </tbody>
                                 </table>

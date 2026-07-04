@@ -16,6 +16,7 @@
             font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif !important;
             margin: 0;
             padding: 0;
+            padding-top: 50px !important;
         }
 
         /* 2. 強制移除遮擋背景的白色區塊 */
@@ -174,10 +175,33 @@
             color: #555;
             line-height: 1.4;
         }
+        /* 新增：頂部固定公告橫幅樣式 */
+        .top-announcement-bar {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            background-color: #fff3cd !important; /* 警告金黃色 */
+            border-bottom: 2px solid #ffeeba !important;
+            color: #856404 !important; /* 深琥珀色文字，確保易讀性 */
+            text-align: center !important;
+            padding: 12px 20px !important;
+            font-size: 11pt !important;
+            font-weight: bold !important;
+            z-index: 9999 !important; /* 確保永遠在最上層 */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+            box-sizing: border-box !important;
+        }
+        .top-announcement-bar a {
+            color: #003366 !important;
+            text-decoration: underline !important;
+        }
     </style>
-</head>
+    </head>
 <body>
-
+<div class="top-announcement-bar">
+    📢 【重要通知】2026/07/04 大會議程更新、學生壁報與口頭競賽分組及規則已公布！請與會先進至 <a href="program.html">大會議程</a>查看細節。
+</div>
 <div id="template_external">
     <div id="template_wrapper">
         <div id="template_header">
